@@ -1,60 +1,66 @@
-//#include <iostream>
-//#include <vector>
-//using namespace std;
-//template <class T> class Mystack;
-//template <class T>
-//class MyStack
-//{
-//private:  
-//	vector <T> v;
-//public:    
-//	MyStack(){}
-//	MyStack(vector<T> s){ v = s; }
-//	void add(T elem)	{ v.push_back(elem); }
-//	T size(){ return v.size(); }
-//	T remove() 
-//	{ 
-//		if (v.size() == 0){ throw "vector is empty" }
-//		T temp = v[v.size() - 1];
-//		v.pop_back();
-//		return temp;
-//	}
-//	void display()
-//	{
-//		vector<T>::iterator iter;
-//		for (iter = v.begin(); iter < v.end(); iter++)
-//			cout << *iter << " ";
-//	}
-//	void find(T x)
-//	{
-//		typename vector<T>::iterator iter;
-//		iter = find(v.begin(), v.end(), x);
-//		if (iter == v.end())
-//		{
-//			cout << "can not find" << endl;
-//		}
-//
-//	}
-//
-//	void sort()
-//	{
-//		sort( v.begin(), v.end());
-//	}
-//};  // end  class A
-//
-//int main()
-//{
-//	try{
-//
-//		MyStack container;
-//		container.add(56);
-//		cout << container.size();
-//		cout << container.remove();
-//		cout << container.size();
-//	}
-//	catch (char *c) { cout << "error: " << c << endl; }
-//	
-//	
-//	system("PAUSE");
-//	return 0;
-//}//main
+#include <iostream>
+#include <vector>
+using namespace std;
+template <class T> class Mystack;
+template <class T>
+
+class MyStack
+
+{
+
+  private:  
+
+	  vector <T> v;
+
+  public:    
+
+	  MyStack(){}
+  	MyStack(vector<T> s){ v = s; }
+  	void add(T elem)	{ v.push_back(elem); }
+  	T size(){ return v.size(); }
+  	T remove() 
+	{ 
+		if (v.size() == 0){ throw "vector is empty" }
+		T temp = v[v.size() - 1];
+		v.pop_back();
+		return temp;
+	}
+	void display()
+	{
+		vector<T>::iterator iter;
+		for (iter = v.begin(); iter < v.end(); iter++)
+			cout << *iter << " ";
+	}
+	void find(T x)
+	{
+		typename vector<T>::iterator iter;
+		iter = find(v.begin(), v.end(), x);
+		if (iter == v.end())
+		{
+			cout << "can not find" << endl;
+		}
+
+	}
+
+	void sort()
+	{
+		sort( v.begin(), v.end());
+	}
+};   end  class A
+
+int main()
+{
+	try{
+
+		MyStack container;
+		container.add(56);
+		cout << container.size();
+		cout << container.remove();
+		cout << container.size();
+	}
+	catch (char *c) { cout << "error: " << c << endl; }
+	
+	
+	system("PAUSE");
+	return 0;
+}main
